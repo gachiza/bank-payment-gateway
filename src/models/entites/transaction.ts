@@ -21,9 +21,6 @@ export class Transaction {
   @Column()
   currency: string;
 
-  @ManyToOne(() => User, (user) => user.accounts)
-  user: User;
-
   @Column({ type: "enum", enum: TransactionType})
   type: TransactionType;
 

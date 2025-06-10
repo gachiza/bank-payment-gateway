@@ -8,11 +8,8 @@ export class Account {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column({ unique: true})
+  @Column({ unique: true })
   accountNumber: string;
-
-  @Column()
-  password: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
   balance: Number;
@@ -31,4 +28,5 @@ export class Account {
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP", onUpdate: "CURRENT_TIMESTAMP"})
   updatedAt: Date;
+
 }
