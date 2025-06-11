@@ -15,7 +15,7 @@ export class Transaction {
   id: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
-  amount: Number;
+  amount: number;
 
 
   @Column()
