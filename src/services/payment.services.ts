@@ -3,7 +3,7 @@ import { Account } from "../models/entites/Account";
 import { Payment } from "../models/entites/Payment";
 import { Transaction } from "../models/entites/Transaction";
 import { z } from "zod";
-import { ApiError} from "../utils/apiError";
+import { ApiError} from "../utils/apiResponse";
 
 export const PaymentService = {
   async processPayment(
@@ -109,6 +109,6 @@ export const processPaymentSchema = z.object({
   description: z.string().optional()
 });
 
-export const paymentdetailsSchema = z.object({
+export const paymentDetailsSchema = z.object({
   paymentReference: z.string().min(1)
 });
