@@ -18,8 +18,9 @@ export class Transaction {
   amount!: number;
 
 
-  @Column()
+  @Column({ type: 'varchar', length: 3 })
   currency!: string;
+  
 
   @Column({ type: "enum", enum: TransactionType})
   type!: TransactionType;

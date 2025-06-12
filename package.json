@@ -8,10 +8,8 @@
     "start": "node dist/server.js",
     "build": "tsc",
     "dev": "node --import=tsx --watch --env-file=.env src/server.ts",
-    
     "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/config/db.ts",
     "migration:run": "typeorm-ts-node-commonjs migration:run -d src/config/db.ts"
-
   },
   "keywords": [],
   "author": "",
@@ -43,6 +41,7 @@
     "supertest": "^7.1.1",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.2",
     "typescript": "^5.8.3"
   }
 }
