@@ -1,35 +1,35 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { Account } from "./account";
+import { Account } from "./Account";
 
 @Entity()
 export class User {
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  id!: string;
 
   @Column({ unique: true})
-  email: string;
+  email!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @Column()
-  firstName: string;
+  firstName!: string;
 
   @Column()
-  lastName: string;
+  lastName!: string;
 
   @Column({ default: false})
-  isAdmin: boolean;
+  isAdmin!: boolean;
 
   @Column({ default: true})
-  isActive: boolean;
+  isActive!: boolean;
 
   @OneToMany(() => Account, (account) => account.user)
-  accounts: Account[];
+  accounts!: Account[];
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
-  createdAt: Date;
+  createdAt!: Date;
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP", onUpdate: "CURRENT_TIMESTAMP"})
-  updatedAt: Date;
+  updatedAt!: Date;
 }

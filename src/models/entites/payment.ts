@@ -1,10 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { Account } from "./account";
+import { Account } from "./Account";
 
 
 export enum PaymentStatus {
   PENDING = "pending",
-  COMPLETED = " completed",
+  COMPLETED = "completed",
   FAILED = "failed"
 }
 
@@ -12,30 +12,30 @@ export enum PaymentStatus {
 @Entity()
 export class Payment {
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  id!: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
-  amount: number;
+  amount!: number;
 
   @Column()
-  currency: string;
+  currency!: string;
 
   @Column()
-  merchantID: string;
+  merchantID!: string;
 
   @Column()
-  merchantname: string;
+  merchantname!: string;
 
   @Column({ nullable: true})
-  description: string;
+  description!: string;
 
   @Column({ type: "enum", enum: PaymentStatus, default: PaymentStatus.PENDING})
-  status: PaymentStatus;
+  status!: PaymentStatus;
 
   @ManyToOne(() => Account, (account) => account.id)
-  account: Account;
+  account!: Account;
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
-  createdAt: Date;
+  createdAt!: Date;
 
 }

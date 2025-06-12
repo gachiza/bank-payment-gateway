@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { Account } from "./account";
+import { Account } from "./Account";
 
 export enum TransactionType {
   DEPOSIT= "deposit",
@@ -12,31 +12,31 @@ export enum TransactionType {
 @Entity()
 export class Transaction {
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  id!: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
-  amount: number;
+  amount!: number;
 
 
   @Column()
-  currency: string;
+  currency!: string;
 
   @Column({ type: "enum", enum: TransactionType})
-  type: TransactionType;
+  type!: TransactionType;
 
   @Column({nullable: true})
-  description: string;
+  description!: string;
 
   @Column({ nullable: true})
-  referemce: string;
+  referemce!: string;
 
   @Column({ default: "pending"})
-  status: string;
+  status!: string;
 
   @ManyToOne(() => Account, (account) => account.transactions)
-  account: Account;
+  account!: Account;
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
-  createdAt: Date;
+  createdAt!: Date;
 
 }
