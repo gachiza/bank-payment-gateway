@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { User } from '../models/entites/user';
+import { User } from '../models/entites/User';
 import { AppDataSource } from "../config/db";
 import { z } from "zod";
 import { appendFileSync, lstat } from "fs";

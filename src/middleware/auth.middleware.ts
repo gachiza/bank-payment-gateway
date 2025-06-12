@@ -11,7 +11,7 @@ declare module "express" {
   }
 }
 
-export const authMiddleware = {
+const authMiddleware = {
   authenticate: (req: Request, res:Response, next: NextFunction) => {
     const token = req.header("Authorization")?.replace("Bearer", "");
     if (!token ){
@@ -32,3 +32,5 @@ export const authMiddleware = {
     next();
   }
 };
+
+export default authMiddleware;

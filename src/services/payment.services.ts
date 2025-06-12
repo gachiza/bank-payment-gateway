@@ -1,6 +1,6 @@
 import { AppDataSource } from "../config/db";
 import { Account } from "../models/entites/Account";
-import { Payment, PaymentStatus } from "../models/entites/payment";
+import { Payment, PaymentStatus } from "../models/entites/Payment";
 import { Transaction } from "../models/entites/Transaction";
 import { z } from "zod";
 import { ApiError} from "../utils/apiResponse";
@@ -89,7 +89,7 @@ export const PaymentService = {
   async getPaymentDetails(paymentReference: string ) {
     const paymentRepository = AppDataSource.getRepository(Payment);
     const payment = await paymentRepository.findOne({
-      where: { paymentReference },
+      where: {paymentReference},
       relations: ["account"]
     });
 

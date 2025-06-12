@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from "typeorm";
-import { User } from "./user";
+import { User } from "./User";
 import { Transaction } from "./Transaction";
 
 

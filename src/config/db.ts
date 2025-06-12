@@ -1,9 +1,9 @@
 import "reflect-metadata";
 import {DataSource} from "typeorm";
-import {User} from "../models/entites/user";
-import {Account} from "../models/entites/account";
-import { Transaction} from "../models/entites/transaction";
-import { Payment } from "../models/entites/payment";
+import {User} from "../models/entites/User";
+import {Account} from "../models/entites/Account";
+import { Transaction} from "../models/entites/Transaction";
+import { Payment } from "../models/entites/Payment";
 import dotenv from "dotenv";
 
 dotenv.config();
