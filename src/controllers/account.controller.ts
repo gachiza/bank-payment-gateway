@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { AccountService } from "../services/account.services";
 import { ApiResponse } from "../utils/apiResponse";
-import { authMiddleware } from "../middleware/auth.middleware";
+
 
 export const AccountController = {
   async createAccount (req: Request, res: Response ) {
@@ -9,27 +9,33 @@ export const AccountController = {
       const { currency } = req.body;
       const userId = req.user.id;
       const account = await AccountService.createAccount(userId, currency);
-      return ApiResponse.success(res, " Account created successfully", { account });
+      ApiResponse.success(res, " Account created successfully", { account });
+      return;
     } catch (error: any ) {
-      return ApiResponse.error(res, error.message, error.statusCode || 500);
+      ApiResponse.error(res, error.message, error.statusCode || 500);
+      
     }
   },
   async getAccountDetails(req: Request, res: Response) {
     try {
       const { accountId } = req.params;
       const account = await AccountService.getAccountDetails(accountId, req.user.id);
-      return ApiResponse.success(res, "Acccount details retrieved successfully", {account});
+      ApiResponse.success(res, "Acccount details retrieved successfully", {account});
+      return;
     } catch (error: any) {
-      return ApiResponse.error(res, error.message, error.statusCode || 500);
+      ApiResponse.error(res, error.message, error.statusCode || 500);
+      
     }
   },
 
   async getUserAccounts(req: Request, res: Response) {
     try {
       const accounts = await AccountService.getUserAccounts(req.user.id);
-      return ApiResponse.success(res, "User accounts retreived successfully", {accounts});
+      ApiResponse.success(res, "User accounts retreived successfully", {accounts});
+      return;
     } catch (error: any) {
-      return ApiResponse.error(res,error.message, error.statusCode || 500);
+      ApiResponse.error(res,error.message, error.statusCode || 500);
+      return;
     }
   },
   async deposit(req: Request, res:Response) {
@@ -39,9 +45,11 @@ export const AccountController = {
         await AccountService.getAccountDetails(accountId,req.user.id);
       }
       const result = await AccountService.deposit(accountId, amount, currency, description);
-      return ApiResponse.success(res, "Deposit successful");
+      ApiResponse.success(res, "Deposit successful");
+      return;
     } catch (error: any) {
-      return ApiResponse.error(res, error.message, error.statusCode || 500 );
+      ApiResponse.error(res, error.message, error.statusCode || 500 );
+      return;
     }
   }
 };

@@ -17,9 +17,11 @@ export const validate = (schema: AnyZodObject) => {
           path: err.path.join("."),
           message: err.message
         }));
-        return ApiResponse.error(res, "Validation failed", 400, {errors});
+        ApiResponse.error(res, "Validation failed", 400, {errors});
+        return;
       }
-      return ApiResponse.error(res, "Internal server error", 500);
+      ApiResponse.error(res, "Internal server error", 500);
+      return;
     }
   };
 };

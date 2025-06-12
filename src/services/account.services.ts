@@ -69,7 +69,7 @@ export const AccountService = {
       const transaction = transactionRepository.create({
         amount,
         currency,
-        type: "deposit",
+        //type: "deposit",
         description: description || "Amount deposit",
         status: "completed",
         account

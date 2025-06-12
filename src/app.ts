@@ -5,7 +5,7 @@ import { initializeDB } from "./config/db";
 import  authRoutes from "./routes/auth.routes";
 import paymentRoutes from "./routes/payment.routes";
 import accountRoutes from "./routes/account.routes";
-import errorMiddleware from "./middleware/error.middleware";
+import {errorMiddleware} from "./middleware/error.middleware";
 import logger from "./utils/logger";
 
 export const createApp = async () => {

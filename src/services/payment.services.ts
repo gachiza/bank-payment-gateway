@@ -44,10 +44,10 @@ export const PaymentService = {
       const payment = paymentRepository.create({
         amount,
         currency,
-        merchantId,
-        merchantName,
+        //merchantId,
+        //merchantName,
         description,
-        paymentReference,
+        //paymentReference,
         status: PaymentStatus.PENDING,
         account
       });
@@ -59,9 +59,9 @@ export const PaymentService = {
       const transaction = transactionRepository.create({
         amount,
         currency,
-        type: "payment",
+        //type: "payment",
         description: `payment to ${merchantName}`,
-        reference: paymentReference,
+        //reference: paymentReference,
         status: "completed",
         account
       });

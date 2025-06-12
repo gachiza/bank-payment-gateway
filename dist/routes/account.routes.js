@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const account_controller_1 = require("../controllers/account.controller");
+const validation_middleware_1 = require("../middleware/validation.middleware");
+const account_services_1 = require("../services/account.services");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const router = (0, express_1.Router)();
+router.post("/", auth_middleware_1.authMiddleware.authenticate, (0, validation_middleware_1.validate)(account_services_1.createAccountSchema), account_controller_1.AccountController.createAccount);
+router.get("/", auth_middleware_1.authMiddleware.authenticate, account_controller_1.AccountController.getUserAccounts);
+router.get("/:accountId", auth_middleware_1.authMiddleware.authenticate, (0, validation_middleware_1.validate)(account_services_1.accountDetailsSchema), account_controller_1.AccountController.getAccountDetails);
+router.post("/deposit", auth_middleware_1.authMiddleware.authenticate, (0, validation_middleware_1.validate)(account_services_1.depositSchema), account_controller_1.AccountController.deposit);
+exports.default = router;

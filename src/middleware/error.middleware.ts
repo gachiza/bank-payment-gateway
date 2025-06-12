@@ -8,7 +8,6 @@ export const errorMiddleware = (
   next: NextFunction
 ) => {
   console.error(error.stack);
-  return ApiResponse.error(res, " Internal server error", 500);
+   ApiResponse.error(res, " Internal server error", 500);
 };
 
-export default errorMiddleware;
