@@ -66,7 +66,7 @@ export const PaymentService = {
         account
       });
       // update payment status
-      payment.status = "completed";
+      payment.status;
 
       //save all changes 
       await queryRunner.manager.save(account);
