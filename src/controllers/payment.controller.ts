@@ -26,7 +26,7 @@ export const PaymentController = {
   async getPaymentDetails(req: Request, res: Response) {
     try {
       const { paymentReference } = req.params;
-      const payment = await PaymentService.processPayment(paymentReference);
+      const payment = await PaymentService.getPaymentDetails(paymentReference);
       if (payment.account.user.id !== req.user.id && !req.user.isAdmin) {
         return ApiResponse.error(res, " Unauthorized access to payment ddetails", 403);
       }

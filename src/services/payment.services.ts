@@ -1,6 +1,6 @@
 import { AppDataSource } from "../config/db";
-import { Account } from "../models/entites/Account";
-import { Payment } from "../models/entites/Payment";
+import { Account } from "../models/entites/account";
+import { Payment } from "../models/entites/payment";
 import { Transaction } from "../models/entites/Transaction";
 import { z } from "zod";
 import { ApiError} from "../utils/apiResponse";
@@ -66,7 +66,7 @@ export const PaymentService = {
         account
       });
       // update payment status
-      payment.status = "completed";
+      
 
       //save all changes 
       await queryRunner.manager.save(account);

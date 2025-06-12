@@ -1,6 +1,6 @@
 import { AppDataSource } from "../config/db";
-import { Account } from "../models/entites/Account";
-import { User } from "../models/entites/User";
+import { Account } from "../models/entites/account";
+import { User } from "../models/entites/user";
 import { Transaction } from "../models/entites/Transaction";
 import { z} from "zod";
 import { ApiError } from "../utils/apiResponse";

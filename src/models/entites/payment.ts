@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { Account } from "./Account";
+import { Account } from "./account";
 
 
 export enum PaymentStatus {
