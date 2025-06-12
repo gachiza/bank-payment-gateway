@@ -18,20 +18,20 @@ export class Transaction {
   amount!: number;
 
 
-  @Column({ type: 'varchar', length: 3 })
+  @Column({ type: 'varchar' })
   currency!: string;
   
 
   @Column({ type: "enum", enum: TransactionType})
   type!: TransactionType;
 
-  @Column({nullable: true})
+  @Column({type: 'varchar'})
   description!: string;
 
-  @Column({ nullable: true})
-  referemce!: string;
+  @Column({ type: 'varchar'})
+  reference!: string;
 
-  @Column({ default: "pending"})
+  @Column({ type: 'varchar', default: "pending"})
   status!: string;
 
   @ManyToOne(() => Account, (account) => account.transactions)

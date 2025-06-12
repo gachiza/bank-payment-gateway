@@ -14,22 +14,22 @@ export class Payment {
   @PrimaryGeneratedColumn("uuid")
   id!: string;
 
-  @Column()
+  @Column({type: 'varchar'})
   paymentReference!: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
   amount!: number;
 
-  @Column()
+  @Column({type: 'varchar'})
   currency!: string;
 
-  @Column()
+  @Column({type: 'varchar'})
   merchantID!: string;
 
-  @Column()
+  @Column({type: 'varchar'})
   merchantname!: string;
 
-  @Column({ nullable: true})
+  @Column({ type: 'varchar',nullable: true})
   description!: string;
 
   @Column({ type: "enum", enum: PaymentStatus, default: PaymentStatus.PENDING})

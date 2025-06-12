@@ -8,13 +8,13 @@ export class Account {
   @PrimaryGeneratedColumn("uuid")
   id!: string;
 
-  @Column({ unique: true })
+  @Column({type: 'varchar', unique: true })
   accountNumber!: string;
 
   @Column({ type: "decimal", precision: 15, scale: 2, default: 0})
   balance!: number;
 
-  @Column()
+  @Column({type: 'varchar'})
   currency!: string;
 
   @ManyToOne(() => User, (user) => user.accounts)
