@@ -6,6 +6,7 @@ export const AuthController = {
   async register(req: Request, res: Response) {
     try {
       const { email, password, firstName, lastName } = req.body;
+      console.log(req.body)
       const user = await AuthService.registerUser(email, password, firstName, lastName);
       ApiResponse.success(res, "User registered successfully", {user});
       return;

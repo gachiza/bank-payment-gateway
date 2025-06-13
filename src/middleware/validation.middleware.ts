@@ -15,10 +15,14 @@ export const validate = (schema: AnyZodObject) => {
       if (error instanceof ZodError) {
         const errors = error.errors.map(err => ({
           path: err.path.join("."),
-          message: err.message
+          message: err.message,
+          validation:err.code
         }));
-        ApiResponse.error(res, "Validation failed", 400, {errors});
-        return;
+        return res.status(400).json({
+          status: "validation-error",
+          message: 'request validation failed',
+          errors: error
+        });
       }
       ApiResponse.error(res, "Internal server error", 500);
       return;
