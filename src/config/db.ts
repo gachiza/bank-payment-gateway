@@ -1,3 +1,5 @@
+import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
+
 import "reflect-metadata";
 import {DataSource} from "typeorm";
 import {User} from "../models/entites/User";

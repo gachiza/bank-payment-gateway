@@ -20,6 +20,7 @@ export const PaymentController = {
         description
       );
       ApiResponse.success(res, "Payment processed successfully", result);
+      return;
     } catch (error: any) {
       ApiResponse.error(res, error.message, error.statusCode || 500);
     }
@@ -33,6 +34,7 @@ export const PaymentController = {
         return;
       }
       ApiResponse.success(res, "Payment details retrieved successfully", payment);
+      return;
     } catch (error: any ) {
       ApiResponse.error(res, error.message, error.statusCode || 500);
     }
