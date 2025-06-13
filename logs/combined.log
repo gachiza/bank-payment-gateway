@@ -55,3 +55,5 @@
 {"level":"info","message":"GET /api/auth/profile","timestamp":"2025-06-13T10:24:18.216Z"}
 {"level":"info","message":"GET /init","timestamp":"2025-06-13T10:24:51.816Z"}
 {"level":"info","message":"POST /","timestamp":"2025-06-13T10:24:51.893Z"}
+{"level":"info","message":"GET /api/auth/profile","timestamp":"2025-06-13T10:30:21.159Z"}
+{"level":"info","message":"GET /api/auth/register","timestamp":"2025-06-13T10:30:32.916Z"}
