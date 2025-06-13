@@ -6,7 +6,7 @@ import { z } from "zod";
 
 
 
-const JWT_SECRET = process.env.JWT_SECRET || "1faccc11d4e4e589c07f1dcf010828b9bf396754ce014f44b8d03e691d47476dd58f62921836533f2e15587a5c3e642aa7e993b3f23ea6746a1dbf5572beb09e";
+const JWT_SECRET = process.env.JWT_SECRET ;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "24h";
 
 export const AuthService = { async registerUser(
