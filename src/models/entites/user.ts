@@ -18,7 +18,7 @@ export class User {
   @Column({type: 'varchar'})
   lastName!: string;
 
-  @Column({type: 'varchar', default: false})
+  @Column({type: 'varchar', default: true})
   isAdmin!: boolean;
 
   @Column({type: 'varchar', default: true})

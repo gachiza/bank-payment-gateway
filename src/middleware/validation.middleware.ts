@@ -5,6 +5,7 @@ import { ApiResponse } from "../utils/apiResponse";
 export const validate = (schema: AnyZodObject) => {
   return (req: Request, res: Response, next: NextFunction) => {
     try {
+      console.log({schema, req});
       schema.safeParse({
         body: req.body,
         query: req.query,
