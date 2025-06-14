@@ -68,3 +68,14 @@
 {"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T12:15:12.127Z"}
 {"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T12:24:34.443Z"}
 {"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T12:31:30.960Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T12:54:35.897Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:46:36.068Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:47:42.925Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:50:06.609Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:50:59.209Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:51:00.478Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:52:25.786Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:53:13.229Z"}
+{"level":"info","message":"POST /api/auth/register","timestamp":"2025-06-13T14:54:32.325Z"}
+{"level":"info","message":"POST /api/auth/login","timestamp":"2025-06-13T15:00:46.858Z"}
+{"level":"info","message":"GET /api/auth/profile","timestamp":"2025-06-13T15:01:19.658Z"}
