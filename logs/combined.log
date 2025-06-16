@@ -109,3 +109,6 @@
 {"level":"info","message":"POST /api/auth/login","timestamp":"2025-06-14T16:36:18.729Z"}
 {"level":"info","message":"POST /api/auth/profile","timestamp":"2025-06-14T16:36:37.995Z"}
 {"level":"info","message":"GET /api/auth/profile","timestamp":"2025-06-14T16:36:45.423Z"}
+{"level":"info","message":"POST /api/accounts/","timestamp":"2025-06-14T16:44:41.495Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:06:12.576Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:11:34.485Z"}

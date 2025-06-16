@@ -13,6 +13,7 @@ declare module "express" {
 export const authMiddleware = {
   authenticate: (req: Request, res:Response, next: NextFunction) => {
     const token = req.header("Authorization")?.replace("Bearer", "");
+    console.log(token);
     if (!token ){
       ApiResponse.error (res, "Authentication required", 401);
       return;
