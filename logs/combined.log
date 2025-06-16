@@ -112,3 +112,9 @@
 {"level":"info","message":"POST /api/accounts/","timestamp":"2025-06-14T16:44:41.495Z"}
 {"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:06:12.576Z"}
 {"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:11:34.485Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:25:31.985Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:27:52.526Z"}
+{"level":"info","message":"POST /api/auth/login","timestamp":"2025-06-14T17:33:48.137Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:35:54.706Z"}
+{"level":"info","message":"POST /api/auth/login","timestamp":"2025-06-14T17:37:35.061Z"}
+{"level":"info","message":"POST /api/accounts","timestamp":"2025-06-14T17:38:50.926Z"}
