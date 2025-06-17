@@ -20,10 +20,13 @@ export const authMiddleware = {
     }
     try {
       const decoded = jwt.verify(token, JWT_SECRET);
+      
       req.user = decoded;
+      
       next();
     } catch (error) {
       ApiResponse.error(res, "Invalid token ", 401);
+      console.log(error);
       return;
     }
   },
